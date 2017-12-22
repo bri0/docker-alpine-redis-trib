@@ -40,6 +40,7 @@ RUN set -ex; \
 	make -C /usr/src/redis -j "$(nproc)"; \
 	make -C /usr/src/redis install; \
 	\
+	gem install redis; \
 	cp /usr/src/redis/src/redis-trib.rb /usr/bin/redis-trib; \
 	chmod 777 /usr/bin/redis-trib; \
 	\
